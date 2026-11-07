@@ -53,3 +53,17 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Keil / C51 编译产物
+51-smart-car/firmware/build/
+*.lst
+*.m51
+*.omf
+*.uvguix.*
+*.uvoptx.bak
+*.bak
+
+# 系统与编辑器
+Thumbs.db
+.DS_Store
+.vscode/
