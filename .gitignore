@@ -56,6 +56,8 @@ dkms.conf
 
 # Keil / C51 编译产物
 51-smart-car/firmware/build/
+51-smart-car/firmware/project/*.uvopt
+51-smart-car/firmware/project/*.uvoptx
 *.lst
 *.m51
 *.omf
