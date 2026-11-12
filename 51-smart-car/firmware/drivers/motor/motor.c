@@ -58,7 +58,7 @@ static u8 motor_magnitude(s8 duty)
 }
 
 /* Timer0 中断：10.017kHz，输出两路软件 PWM */
-static void timer0_pwm_isr(void) interrupt 1
+static void timer0_pwm_isr(void) INT(1)
 {
     if (s_pwm_cnt >= (u8)PWM_PERIOD)
     {

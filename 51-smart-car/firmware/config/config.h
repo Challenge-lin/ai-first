@@ -5,6 +5,7 @@
  * 配置总入口（Keil C51）
  *
  * 包含顺序固定如下，模块内只写 #include "config.h"，不要单独包含下层文件：
+ *   0. config_compat.h    编译器兼容层（最先，提供 SBIT/INT/_nop_/存储类映射）
  *   1. config_types.h     数据类型别名（最先，其他头文件依赖 u8/s16/u32）
  *   2. config_build.h     编译开关与频率配置
  *   3. config_pin.h       引脚宏 / sbit 位定义
@@ -17,6 +18,7 @@
  * 约束：本目录只放宏、类型、位声明、常量与 extern 声明，不放函数实现。
  */
 
+#include "config_compat.h"
 #include "config_types.h"
 #include "config_build.h"
 #include "config_pin.h"

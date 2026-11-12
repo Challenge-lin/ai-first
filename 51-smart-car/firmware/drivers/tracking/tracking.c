@@ -18,7 +18,7 @@
 #include "config.h"
 #include "tracking.h"
 #include "tick.h"
-#include <intrins.h>
+/* _nop_() 由 config_compat.h 提供（SDCC 内联汇编 / Keil intrins.h） */
 
 /* 状态机内部常量（config_tracking.h 未定义的部分） */
 #define TRK_CROSS_CONFIRM     2U     /* 连续 2 次扫描满足才进十字 */

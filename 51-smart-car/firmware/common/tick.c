@@ -70,7 +70,7 @@ u16 tick_elapsed_ms(u16 start_ms)
  * Timer1 溢出中断：每 1ms 一次。
  * 先重装再处理标志，保证下一次定时周期不被中断服务时间拉长。
  */
-void timer1_isr(void) interrupt 3
+void timer1_isr(void) INT(3)
 {
     TH1 = (u8)(TIMER1_TICK_RELOAD >> 8);
     TL1 = (u8)(TIMER1_TICK_RELOAD & 0x00FF);

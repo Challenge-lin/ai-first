@@ -42,7 +42,7 @@ static u16 idata s_left_stamp;
 static u16 idata s_right_stamp;
 
 /* INT0：左轮 A 相下降沿 */
-static void enc_left_isr(void) interrupt 0
+static void enc_left_isr(void) INT(0)
 {
     u8 fwd;
 
@@ -66,7 +66,7 @@ static void enc_left_isr(void) interrupt 0
 }
 
 /* INT1：右轮 A 相下降沿 */
-static void enc_right_isr(void) interrupt 2
+static void enc_right_isr(void) INT(2)
 {
     u8 fwd;
 
